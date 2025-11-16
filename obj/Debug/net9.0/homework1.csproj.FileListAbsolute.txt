@@ -1,0 +1,14 @@
+C:\Users\ПК\Documents\ООП\homework1\bin\Debug\net9.0\homework1.exe
+C:\Users\ПК\Documents\ООП\homework1\bin\Debug\net9.0\homework1.deps.json
+C:\Users\ПК\Documents\ООП\homework1\bin\Debug\net9.0\homework1.runtimeconfig.json
+C:\Users\ПК\Documents\ООП\homework1\bin\Debug\net9.0\homework1.dll
+C:\Users\ПК\Documents\ООП\homework1\bin\Debug\net9.0\homework1.pdb
+C:\Users\ПК\Documents\ООП\homework1\obj\Debug\net9.0\homework1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ПК\Documents\ООП\homework1\obj\Debug\net9.0\homework1.AssemblyInfoInputs.cache
+C:\Users\ПК\Documents\ООП\homework1\obj\Debug\net9.0\homework1.AssemblyInfo.cs
+C:\Users\ПК\Documents\ООП\homework1\obj\Debug\net9.0\homework1.csproj.CoreCompileInputs.cache
+C:\Users\ПК\Documents\ООП\homework1\obj\Debug\net9.0\homework1.dll
+C:\Users\ПК\Documents\ООП\homework1\obj\Debug\net9.0\refint\homework1.dll
+C:\Users\ПК\Documents\ООП\homework1\obj\Debug\net9.0\homework1.pdb
+C:\Users\ПК\Documents\ООП\homework1\obj\Debug\net9.0\homework1.genruntimeconfig.cache
+C:\Users\ПК\Documents\ООП\homework1\obj\Debug\net9.0\ref\homework1.dll
