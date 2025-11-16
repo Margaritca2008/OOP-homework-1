@@ -12,7 +12,7 @@ namespace OOP1
             get { return _price; }
             private set {
                 if (value < 0) {
-                    throw new ArgumentOutOfRangeException(nameof(Price), "Price must be >= 0");
+                    throw new ArgumentOutOfRangeException(nameof(Price), "Цена должна быть >= 0");
                 } 
                 _price = value;
             }
@@ -23,7 +23,7 @@ namespace OOP1
             private set {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException(nameof(Stock), "Stock must be >= 0");
+                    throw new ArgumentOutOfRangeException(nameof(Stock), "Количество должно быть >= 0");
                 }
                 _stock = value;
             }
@@ -42,6 +42,10 @@ namespace OOP1
         }
         public void Rent()
         {
+            if (Stock <= 0)
+            {
+                throw new InvalidOperationException("Книги нет в наличии");
+            }
             Stock -= 1;
         }
         public void Return()
@@ -58,7 +62,7 @@ namespace OOP1
         }
         public  override string ToString()
         {
-            return $"Isbn: {Isbn}, Title: {Title}, Author: {Author}, Price: {Price:C}, Stock: {Stock}";
+            return $"Идентификатор: {Isbn}, Название: {Title}, Автор: {Author}, Цена: {Price:C}, Количество: {Stock}";
         }
     }
 }

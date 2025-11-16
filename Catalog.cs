@@ -1,8 +1,4 @@
 using System;
-using System.ComponentModel.Design;
-using System.Dynamic;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
 namespace OOP1
 {
     class Catalog
@@ -13,6 +9,10 @@ namespace OOP1
         public int Count => _items.Count;
         public void Add(Book book)
         {
+            if (_items.ContainsKey(book.Isbn))
+            {
+                throw new ArgumentException($"Книга с таким идентификатором - {book.Isbn}' уже есть");
+            }
             _items[book.Isbn] = book;
             _order.Add(book.Isbn);
         }
@@ -26,21 +26,14 @@ namespace OOP1
             }
             return false;
         }
-        public bool Contains(string isbn)
-        {
-            if (_items.ContainsKey(isbn))
-            {
-                return true;
-            }
-            return false;
-        }
+        public bool Contains(string isbn) => _items.ContainsKey(isbn) == true;
         public Book this[string isbn]
         {
             get
             {
                 if (!_items.ContainsKey(isbn))
                 {
-                    throw new KeyNotFoundException($"Book with this {isbn} not found");
+                    throw new KeyNotFoundException($"Книга с таким идентификатором - {isbn} не найдена");
                 }
                 return _items[isbn];
             }
@@ -51,7 +44,7 @@ namespace OOP1
             {
                 if (index < 0 || index >= _order.Count)
                 {
-                    throw new IndexOutOfRangeException($"Index out of range");
+                    throw new IndexOutOfRangeException($"Индекс вышел за границу");
                 }
                 string isbn = _order[index];
                 return _items[isbn];
@@ -66,7 +59,7 @@ namespace OOP1
                 var books = _order.Select(isbn => _items[isbn]).Where(b => b.Author == author).ToList();
                 if (n < 0 || n >= books.Count)
                 {
-                    throw new IndexOutOfRangeException($"Index out of range");
+                    throw new IndexOutOfRangeException($"Индекс вышел за границу");
                 }
                 return books[n];
             }
